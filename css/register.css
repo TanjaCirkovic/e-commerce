@@ -1,0 +1,27 @@
+.page-title {
+	line-height: 41px;
+	font-weight: bold;
+	letter-spacing: -0.55px;
+	font-size: 32px;
+}
+.form-control {
+	background-color: var(--bg);
+    border-color: #9C9797;
+}
+.helper {
+	color: #9C9797;
+}
+
+.btn-outline-custom {
+	border-color: #9C9797;
+	color: #1f1f1f;
+	border-radius: 8px;
+}
+.form-card {
+    border: solid 2px #eee;
+    border-radius: 8px;
+}
+.form-check-input:checked{
+    background-color: black;
+    border-color: black;
+}

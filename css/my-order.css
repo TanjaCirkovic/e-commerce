@@ -1,0 +1,24 @@
+.table-order, .bill-address {
+    border: solid 1px #9C9797;
+    border-radius: 8px;
+    padding: 10px;
+}
+table tr {
+    background-color: #FAF8F8 !important;
+    border-bottom:solid 1px #9C9797;
+}
+.t-main  a {
+    color: #9C9797;
+}
+.btn {
+    width: 75%;
+    margin: 5px auto;
+}
+.table-order {
+    max-height: 270px;
+}
+@media (max-width: 991px) {
+    .btn {
+        width: 100%;
+    }
+}

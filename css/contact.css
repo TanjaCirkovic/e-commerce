@@ -1,0 +1,18 @@
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+form {
+    background: var(--bg);
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 100%;
+    padding: 40px;
+}
+.form-control {
+	background-color: var(--bg);
+	border: 1px solid #9C9797; 
+    color:#9c9797; 
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<title>Product Page</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="css/style_H_F.css" type="text/css">
+	<link rel="stylesheet" href="css/p_page_style.css" type="text/css">
+	<script src="js/products.js" defer></script>
+</head>
+<body>
+	<header class="sticky-top">
+		<div class="container d-flex justify-content-between align-items-center">
+		<a class="navbar-brand mx-auto mx-lg-0" href="home_page.html"><img class="img-fluid rounded float-md-start" src="images/logo-img.png" alt="logo" height="40"></a>
+		<nav class="d-none d-lg-block">
+		    <ul class="nav">
+			<li class="nav-item"><a class="nav-link fw-bold" href="home_page.html">Home</a></li>
+			<li class="nav-item"><a class="nav-link fw-bold" href="product_page.html">Shop</a></li>
+			<li class="nav-item"><a class="nav-link fw-bold" href="about_page.html">About</a></li>
+			<li class="nav-item"><a class="nav-link fw-bold" href="contact_page.html">Contact</a></li>
+			<li class="nav-item"><a class="nav-link text-danger fw-bold" href="#">Sale!</a></li>	
+		   </ul>
+		</nav>
+		<nav class="navbar navbar-expand-md navbar-light px-3 d-lg-none position-absolute start-0">
+			<div class="d-flex d-1g-none align-items-center">
+			<button class="btn" data-bs-toggle="collapse" data-bs-target="#navMenu"><i class="bi bi-list"></i></button>
+			<i class="bi bi-search ms-2"></i>
+			</div>
+		</nav>
+		<div class="d-flex align-items-center gap-3">
+			<input class="search-input d-none d-md-block" type="search" name="search" id="search" placeholder="Search">
+			<span  class="text-dark fs-5 px-2"  onclick="openCart()"><img src="images/cart.png " alt="cart"/></span>
+			<a  class="text-dark fs-5" href="login_page.html"><img src="images/people icon.png" alt="people"/></a>
+		</div></div>
+	</header>
+	<div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="home_page.html" class="text-decoration-none">Home</a></li>
+                <li class="breadcrumb-item active">View All</li>
+            </ol>
+        </nav>
+	<div class="row my-2">
+		<div class="col offset-md-3">
+			<h1 class="col-12 text-center">View All Products</h1>
+		</div>
+	</div>
+	<div class="d-none d-md-flex row justify-content-between">
+		<div class="col offset-md-2">
+			<p class="text-muted">Showing 13-24 of 312 Products</p>
+		</div>
+		<div class="col-2 align-items-end justify-content-end">
+			<select name="select" id="select_items" class="sort_by form-select form-select-sm text-muted">
+				<option  value="Most Popular" selected>Sort by:Most Popular</option>
+			</select>
+		</div>
+	</div></div>
+	<div class="container-fluid mb-2 mx-lg-5">
+		<div class="row align-items-stretch">
+		<aside class="col-md-2 d-none d-lg-flex">			
+		<div class="border rounded p-4 h-100 shadow-sm">
+			<h2 class="fs-5 mb-4">Filters</h2>
+			<div class="mb-3 border-bottom pb-3">
+				<label class="fw-bold mb-2">Price</label>
+				<select class="form-select form-select-sm" name="price" id="price_selection">
+					<option value="50">50€ or less</option>
+				</select>		
+			</div>
+			<div class="mb-3 border-bottom pb-3">
+				<label class="fw-bold mb-2">Brand</label>
+				<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="asos_design" value="Like" id="asos_design" checked>
+				<label class="form-check-label">ASOS DESIGN</label>
+				</div>
+				<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="zara" value="Like" id="zara">
+				<label class="form-check-label">Zara</label>
+				</div>
+				<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="bershka" value="Like" id="bershka">
+				<label class="form-check-label">Bershka</label>
+				</div>
+				<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="miss_selfridge" value="Like" id="miss_selfridge">
+				<label class="form-check-label">Miss Selfridge</label>
+				</div>
+			</div>
+			<div class="mb-3 border-bottom pb-3">
+				<label class="fw-bold mb-2">Categories</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="tops" value="Like" id="tops">
+					<label class="form-check-label">Tops</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="scarfs" value="Like" id="scarfs">
+					<label class="form-check-label">Scarfs</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="dresses" value="Like" id="dresses">
+					<label class="form-check-label">Dresses</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="jumper" value="Like" id="jumper">
+					<label class="form-check-label">Jumper</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="all" value="Like" id="all" checked>
+					<label class="form-check-label">All</label>
+				</div>
+			</div>
+			<div class="mb-3 border-bottom pb-3">
+				<label class="fw-bold mb-2">Collection</label>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="spring/summer" value="Like" id="spring/summer">
+					<label class="form-check-label">Spring / Summer</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="autumn/winter" value="Like" id="autumn/winter">
+					<label class="form-check-label">Autumn / Winter</label>
+				</div>
+			</div>
+			<div class="mb-3 border-bottom pb-3">
+				<label class="fw-bold mb-2">Colors</label>
+				<select class="form-select form-select-sm"  name="price" id="colors">
+					<option value="Blue">Blue</option>
+				</select>
+			</div>
+			<div class="mb-4">
+				<label class="fw-bold mb-2" for="other">Other</label>
+				<select class="form-select form-select-sm" name="price" id="other">
+					<option value="Gender">Gender</option>
+				</select>
+			</div>
+			<button class="btn btn-dark w-100 my-5" type="submit">Apply Filters</button>
+		</div>
+		</aside>
+		<main class="col-lg-9">
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 h-100">
+			<div class="col">
+				<div class="card h-100">
+				<img class="card-img" src="images/210146624-1-lightbluestripe.jpg" alt="ASOS asymmetric top">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">ASOS DESIGN knit skinny scarf in chocolate stripe</p>
+					<h2 class="text-center">€29.99</h2>
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(29.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/210138273-1-blackpolkadot.jpg" alt="ASOS mini dress">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">ASOS DESIGN chiffon cape detail mini dress</p>
+					<h2 class="text-center">€49.99</h2>
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(49.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/210131519-1-greymarl.jpg" alt="ASOS skinny scarf">
+				<img class="img-fluid sale-icon" src="images/Rectangle 156.png" alt="sale">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">ASOS DESIGN asymmetric braon top</p>
+					<h2 class="text-center">€17.99 <small class="text-muted"><s>22.49</s></small></h2>
+					<button class="btn btn-light w-100" type="submit" onclick="dodajNaIznos(17.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/210106550-2.jpg" alt="ASOS maxi dress">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">ASOS DESIGN supersoft lace hybrid maxi dress</p>
+					<h2 class="text-center">€49.99</h2>				
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(49.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/210079846-2.jpg" alt="Top in chocolate">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">Topshop knitted high back cut out top</p>
+					<h2 class="text-center">€47.99</h2>				
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(47.99)">Add to Cart</button>
+				</div> 
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/210059567-1-red.jpg" alt="Miss Selfridge top">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">Miss Selfridge scoop front corset top</p>
+					<h2 class="text-center">€29.99</h2>				
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(29.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/210040140-2.jpg" alt="ASOS maxi dress">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">ASOS DESIGN velvet twist shoulder maxi dress</p>
+					<h2 class="text-center">€74.99</h2>			
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(74.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/209990401-2.jpg" alt="ASOS midi skirt">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">Miss Selfridge blanket stitch cardigan</p>
+					<h2 class="text-center">€44.99</h2>			
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(44.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/209890442-1-chocolate.jpg" alt="Miss Selfridge cardigan">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">Miss Selfridge chunky fluffy knitted cardigan</p>
+					<h2 class="text-center">€44.99</h2>				
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(44.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/209816673-1-blackwhite.jpg" alt="Miss Selfridge stitch cardigan">
+				<img class="img-fluid sale-icon" src="images/Rectangle 156.png" alt="sale">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">ASOS DESIGN denim pleated midi skirt</p>
+					<h2 class="text-center">€39.99 <small class="text-muted"><s>49.99</s></small></h2>
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(39.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/209732270-2.jpg" alt="ASOS maxi dress">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">ASOS DESIGN modesty diamante detail maxi dress</p>
+					<h2 class="text-center">€52.99</h2>
+					<button class="btn btn-light w-100" type="submit" onclick="dodajNaIznos(52.99)">Add to Cart</button>
+				</div>
+			</div></div>
+			<div class="col">
+				<div class="card h-100">
+				<img class="cart-img" src="images/209630565-2.jpg" alt="ASOS oversized jumper">
+				<div class="card-body d-flex flex-column">
+					<p class="text-center">ASOS DESIGN abstract brushed oversized jumper</p>
+					<h2 class="text-center">€44.99</h2>
+					<button class="btn btn-light w-100"  type="submit" onclick="dodajNaIznos(44.99)">Add to Cart</button>
+				</div> 
+			</div></div>
+		</div></main></div></div>
+	<div class="col d-flex justify-content-center">
+	<nav aria-label="Page navigation" class="mb-3">
+  		<ul class="pagination">
+			<li class="page-item"><a class="page-link text-muted" href="#">Back</a></li>
+			<li class="page-item"><a class="page-link text-muted" href="#">1</a></li>
+			<li class="page-item"><a class="page-link text-muted" href="#">2</a></li>
+			<li class="page-item"><a class="page-link text-muted" href="#">...</a></li>
+			<li class="page-item"><a class="page-link text-muted" href="#">9</a></li>
+			<li class="page-item"><a class="page-link text-muted" href="#">10</a></li>
+			<li class="page-item"><a class="page-link text-muted" href="#">Next</a></li>
+  		</ul>
+	</nav></div>
+		<div class="container-fluid my-3 best_offer">
+  			<div class="row align-items-center justify-content-center">
+    			<div class="col-md-6">
+      				<div class="row">
+        				<div class="col-12 mt-2">
+          					<p class="display-6 text-center fw-bold">STAY UP TO DATE ABOUT</p>
+        				</div>
+        				<div class="col-12">
+          				<p class="display-6 text-center fw-bold">OUR BEST OFFERS!</p>
+        				</div>
+      				</div>
+    			</div>
+    			<div class="col-md-4">
+      				<div class="row gap-3">
+        				<div class="col-12">
+          					<button class="btn btn-light w-100" type="submit">Enter your email address</button>
+        				</div>
+        				<div class="col-12">
+          				<button class="btn btn-dark w-100 mb-2" type="submit">Subscribe to Newsletter</button>
+        				</div>
+      				</div>
+    			</div>
+			</div>
+		</div>				
+	<footer class="container pt-5">
+        <div class="row mb-4 footer-section justify-content-start">
+          <div class="col-12 col-lg-4 mb-3 mb-lg-0">
+				<h2><a class="h6 fw-bold text-decoration-none" href="product_page.html">SHOP</a></h2>
+					<ul class="list-unstyled">
+						<li><a class="text-decoration-none small" href="#">Dresses</a></li>
+						<li><a class="text-decoration-none small" href="#">Jacket</a></li>
+						<li><a class="text-decoration-none small" href="#">Skirts</a></li>
+						<li><a class="text-decoration-none small" href="#">Shoes & Bags</a></li>
+						<li><a class="text-decoration-none small" href="#">Gift Cards</a></li>
+						<li><a class="text-decoration-none small" href="#">Sales & Offers</a></li>
+					</ul>	
+		  </div>
+		  <div class="col-12 col-lg-4">
+				<h2><a class="h6 fw-bold text-decoration-none" href="#">INFORMATION</a></h2>
+					<ul class="list-unstyled d-none d-lg-block">
+						<li><a class="text-decoration-none small" href="#">About</a></li>
+						<li><a class="text-decoration-none small" href="#">Term and Conditions</a></li>
+						<li><a class="text-decoration-none small" href="#">Privacy Policy</a></li>
+						<li><a class="text-decoration-none small" href="#">Delivery and Return</a></li>
+					</ul>
+			</div>
+			<div class="col-12 col-lg-4">
+				<h2><a class="h6 fw-bold text-decoration-none" href="#">CUSTOMER SERVICE</a></h2>
+					<ul class="list-unstyled d-none d-lg-block">
+						<li><a class="text-decoration-none small" href="#">Contact</a></li>
+						<li><a class="text-decoration-none small" href="#">Help</a></li>
+						<li><a class="text-decoration-none small" href="#">FAQ</a></li>
+					</ul>
+			</div>
+		</div>
+		<div class="row align-items-center py-4 justify-content-between">
+            <div class="col-md-8 mb-3 mb-md-0">Designed and developed by: 
+				<span class="foot-brand"><img class="IT-academy" src="images/ITacademy.png" alt="ITA"/></span>
+            </div>
+            <div class="col-md-3 d-flex gap-3">
+                <a href="https://www.facebook.com" class="mx-2"><img class="facebook" src="images/facebook.png" alt="facebook"/></a>
+                <a href="https://www.instagram.com" class="mx-2"><img class="instagram" src="images/instagram.png" alt="instagram"/></a>
+                <a href="https://www.tiktok.com" class="mx-2"><img class="tik-tok" src="images/tik-tok.png" alt="tik-tok"/></a>
+            </div>
+        </div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

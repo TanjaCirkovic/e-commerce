@@ -1,0 +1,21 @@
+.best_offer {
+    background-color: #b3a1a1;
+}
+.form-select, .form-check-input, .card {
+    background-color: #faf8f8;
+}
+.sort_by {
+    border: none;
+    text-align: right;
+}
+.sale-icon {
+    position: absolute;
+    z-index: 1;
+    max-width: 55px;
+    right: 0px;
+    top: 0px;
+}
+.form-check-input:checked{
+    background-color: black;
+    border-color: black;
+}

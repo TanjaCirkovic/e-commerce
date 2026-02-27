@@ -1,0 +1,17 @@
+.promotion {
+    height: 120px;
+	background-color: #d0b7b7;
+}
+.btn-s_all {
+    width: 75%;
+	height: 36px;
+}
+.logo_img {
+    width: 90%;
+    height: auto;
+}
+@media (max-width: 991px) {
+    .logo_img {
+        max-height: 60%;
+    }
+}
