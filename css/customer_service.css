@@ -1,0 +1,26 @@
+.hidden {
+    display: none;
+}
+
+.answer_btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #1f1f1f;
+}
+
+.answer_btn:hover {
+    color: #007bff;
+}
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: transparent;
+}
+p {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: justify;
+}
